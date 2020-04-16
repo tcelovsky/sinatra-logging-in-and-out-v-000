@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
   </head>
   <body id="page-top">
+    Welcome <%=@user.username%>!
+    Your account balance is <%=@user.balance%>
     
+    <form method="post" action="/logout">
+    <input id="hidden" type="hidden" name="_method" value="Log Out">
+    <input type="submit" value="delete">
+    </form>
 
   </body>
 </html>
